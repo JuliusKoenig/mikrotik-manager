@@ -5,10 +5,13 @@ description = "Central Management System for Mikrotik's RouterOS."
 authors = [
     { name = "Julius Koenig", email = "info@bastelquartier.de" },
 ]
-dependencies = []
+dependencies = ["wiederverwendbar[fastapi,functions,nicegui,sqlalchemy,typer,uvicorn]>=0.11.1", "celery>=5.5.3", "flower>=2.0.1", "python-pidfile>=3.1.1", "libsass>=0.23.0"]
 requires-python = ">=3.14"
 readme = "README.md"
 license = { file = "LICENSE" }
+
+[project.scripts]
+mikrotik-manager = "mikrotik_manager.__main__:cli_app"
 
 [build-system]
 requires = ["pdm-backend"]

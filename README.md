@@ -2,8 +2,7 @@
 Central Management System for Mikrotik's RouterOS.
 
 ## Roadmap - DEV Stage
-- [ ] Claim Repository & PyPI Package Name
-- [ ] Project Structure Setup (FastAPI, SQLAlchemy, Alembic, etc.)
+- [x] Claim Repository & PyPI Package Name
 - [ ] Web Interface Setup (starlette-admin or nicegui)
 - [ ] Database Integration (MariaDB or MongoDB)
 - [ ] Management of Mikrotik Devices (CRUD operations)

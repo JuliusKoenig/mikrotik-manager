@@ -1,6 +1,6 @@
-__title__ = "mikrotik-manager"
+__title__ = "Mikrotik Manager"
 __description__ = "Central Management System for Mikrotik's RouterOS."
-__version__ = "0.1.0.dev1"
+__version__ = "0.1.0a1"
 __author__ = "Julius Koenig"
 __author_email__ = "info@bastelquartier.de"
 __license__ = "GPL-3.0"
