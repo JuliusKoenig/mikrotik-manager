@@ -6,7 +6,7 @@ from sqlalchemy.orm import relationship
 from mikrotik_manager.db.base import Base
 
 if TYPE_CHECKING:
-    from mikrotik_manager.db.credential import Credential
+    from mikrotik_manager.db.mikrotik_credential import MikrotikCredential
 
 
 class MikrotikDevice(Base):
@@ -17,13 +17,13 @@ class MikrotikDevice(Base):
                      primary_key=True,
                      autoincrement=True,
                      name="mikrotik_device_id")
-    credential_id: int = Column(Integer(),
-                                ForeignKey("credential.credential_id"),
-                                nullable=False,
-                                name="mikrotik_device_credential_id")
-    credential: Optional["Credential"] = relationship("Credential",
-                                                      foreign_keys="Credential.id",
-                                                      primaryjoin="MikrotikDevice.credential_id == Credential.id")
+    mikrotik_credential_id: int = Column(Integer(),
+                                         ForeignKey("mikrotik_credential.mikrotik_credential_id"),
+                                         nullable=False,
+                                         name="mikrotik_device_mikrotik_credential_id")
+    mikrotik_credential: Optional["MikrotikCredential"] = relationship("MikrotikCredential",
+                                                                       foreign_keys="MikrotikCredential.id",
+                                                                       primaryjoin="MikrotikDevice.mikrotik_credential_id == MikrotikCredential.id")
     name: str = Column(VARCHAR(255),
                        unique=True,
                        nullable=False,
