@@ -1,18 +1,12 @@
 from nicegui import ui
 from nicegui.client import Client
-from fastapi import Request
 
 from mikrotik_manager.settings import settings
 
-from mikrotik_manager.ui.base_layout import BaseLayout
-
-layout = BaseLayout()
-
 # PRIMARY_COLOR = "rgb(144, 164, 174)"
-VERTICAL_HEIGHT = "h-[calc(100vh-6.3rem)]"
+# VERTICAL_HEIGHT = "h-[calc(100vh-6.3rem)]"
 
 
-@layout.section(name="header")
 class Header(ui.header):
     def __init__(self, client: Client):
         super().__init__()
@@ -62,10 +56,3 @@ class Header(ui.header):
         with self.header_middle_section:
             self.title = ui.label(settings.branding_title)
             self.title.classes("text-2xl font-bold")
-
-
-
-
-@layout.section()
-async def footer(request: Request, client: Client):
-    print()

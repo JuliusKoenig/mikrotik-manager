@@ -67,6 +67,8 @@ def init_command() -> None:
     :return: None
     """
 
+    s = settings
+
     from mikrotik_manager.db import db
 
     # print header

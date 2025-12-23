@@ -61,7 +61,7 @@ class Settings(CelerySettings, UvicornServerSettings, TyperSettings, LoggerSetti
             "branding_license_url": __license_url__,
             "branding_terms_of_service": __terms_of_service__
         },
-        "file_save_on_load": "if_not_exist"
+        "file_must_exist": True
     }
 
     # app

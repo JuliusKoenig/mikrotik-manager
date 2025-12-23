@@ -3,8 +3,8 @@ Central Management System for Mikrotik's RouterOS.
 
 ## Roadmap - DEV Stage
 - [x] Claim Repository & PyPI Package Name
-- [ ] Web Interface Setup (starlette-admin or nicegui)
-- [ ] Database Integration (MariaDB or MongoDB)
+- [x] Web Interface Setup (starlette-admin or nicegui)
+- [x] Database Integration (MariaDB or MongoDB)
 - [ ] Management of Mikrotik Devices (CRUD operations)
 - [ ] Async connection to Mikrotik Devices (via Worker see celery)
 - [ ] Fetch basic information from Mikrotik Devices (hostname, model, serial number, firmware version, etc.)
